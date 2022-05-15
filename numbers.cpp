@@ -8,35 +8,15 @@
 
 int main() {
     // this program shows the sum of all numbers from 0 to number
-    std::string intNumber;
-    int number;
-    int sum = 0;
-    int numberCounter = 1;
-    int addedNumber;
-
-
-
-    // input
-    std::cout << "Enter number to add to (integer): ";
-    std::cin >> intNumber;
-    std::cout << std::endl;
 
     // process & output
-    try {
-        number = std::stoi(intNumber);
-        for (int counter = 1; counter < number + 1; counter++) {
-            std::cout << "Enter number " << numberCounter <<" (integer): ";
-            std::cin >> addedNumber;
-
-            if (addedNumber < 0) {
-                continue;
+    for (int counter = 1000; counter < 2001; counter++) {
+            if (counter % 5 == 0) {
+                std::cout << "" << std::endl;
+                std::cout << counter << " ";
+            } else {
+                std::cout << counter << " ";
             }
-            sum = sum + addedNumber;
-            numberCounter = numberCounter + 1;
         }
-        std::cout << "The sum of numbers is " << sum << std::endl;
-    } catch (std::invalid_argument) {
-        std::cout << "Not an integer";
-    }
     std::cout << "\nDone." << std::endl;
 }
